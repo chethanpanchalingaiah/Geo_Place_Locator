@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #cac7c79c;
+}
+
+button {
+    padding: 6px;
+}
+
+.file-input.custom {
+    background: #00b9ff6b;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #793232;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 10px 0;
+    flex-direction: column;
+}
+
+i.fa.fa-hand-pointer-o {
+    font-size: 32px;
+}
+
+.file-input {
+    pointer-events: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.file-input>* {
+    pointer-events: none;
+}
+
+.file-input>input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: all;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+}
+
+.form-sec {
+    display: flex;
+    flex-direction: column;
+}
+.btn-primary {
+    margin-bottom: 6px !important;
+}
+
+.fa {
+    font-size: 14px;
+    padding-left: 5px;
+}
+
+.file-input.custom:hover {
+    background: #aaff8073;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    -moz-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+.flash {
+    animation-name: flash;
+    -webkit-animation-name: flash;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+    animation-timing-function: ease-in;
+    -webkit-animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes flash {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes flash {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}

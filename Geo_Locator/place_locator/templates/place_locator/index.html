@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+   <head>
+      <title>Google Coordinate Locator</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="{% static 'css/place_locator.css' %}">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <style>
+     
+      </style>
+   </head>
+   <body>
+      <div class="wrapper">
+         <div class="form-container">
+            <form action= "" method="post" enctype="multipart/form-data">
+               <div class="form-sec">
+                  {% csrf_token %}
+                  <div class="file-input custom">
+                     <span>Select File</span>
+                     <input type="file" name="filename"/>
+                     <i class="fa fa-hand-pointer-o flash" aria-hidden="true"></i>
+                  </div>
+                  <button type="submit" name="submit"  class="btn btn-primary">Submit <i class="fa fa-cloud-upload" aria-hidden="true"></i></button>
+                  <button type="submit" name="download" class="btn btn-success download">Download <i class="fa fa-cloud-download" aria-hidden="true"></i></button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </body>
+</html>
